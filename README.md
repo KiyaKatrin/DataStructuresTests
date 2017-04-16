@@ -37,7 +37,7 @@ Testing of Array, List and Linked List of usage for knowing most important thing
 
 2. ```LinkedList<T>``` is node-pointer based collection. In .NET it's in doubly linked implementation. This means that prior/next elements have link to current element. And data is fragmented -- different list objects can be located in different places of RAM. Also there will be more memory used for ```LinkedList<T>``` than for ```List<T>``` or Array.
 
-3. ```List<T>``` in .Net is Java's alternative of ```ArraList<T>```. This means that this is array wrapper. So it's allocated in menory as one contiguous block of data. If allocated data size exceeds 85000 bytes, it will be allocated iside of the Large Object Heap. Depending on the size, this can lead to heap fragmentation, a mild form of memory leak. But in the same time if size < 85000 bytes -- this provides a very compact and fast-access representation in memory. 
+3. ```List<T>``` in .Net is Java's alternative of ```ArraList<T>```. This means that this is array wrapper. So it's allocated in memory as one contiguous block of data. If allocated data size exceeds 85000 bytes, it will be allocated iside of the Large Object Heap. Depending on the size, this can lead to heap fragmentation, a mild form of memory leak. But in the same time if size < 85000 bytes -- this provides a very compact and fast-access representation in memory. 
 
 4. Single contiguous block is preferred for random access performance and memory consumption but for collections that need to change size regularly a structure such as an Array generally need to be copied to a new location whereas a linked list only needs to manage the memory for the newly inserted/deleted nodes. 
 
